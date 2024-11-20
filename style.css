@@ -10,18 +10,8 @@ body {
     left: 0;
   }
   
-  #message {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 40px;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
-  }
+  
+  
   
   #fullscreenBtn {
     position: absolute;
@@ -40,14 +30,36 @@ body {
   #fullscreenBtn:hover {
     background-color: #45a049;
   }
+    
+
+  #message {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    font-size: 60px;
+    font-family: 'Arial', sans-serif;
+    color: #02ccff; /* Zlatá barva pro elegantní vzhled */
+    text-align: center;
+    opacity: 0;
+    text-shadow: 
+      0 0 5px #1220dc, 
+      0 0 10px #1220dc, 
+      0 0 20px #1220dc, 
+      0 0 30px #5f08b1, /* Růžová pro jemné lesknutí */
+      0 0 40px #5f08b1, 
+      0 0 50px #5f08b1, 
+      0 0 75px #5f08b1; /* Růžová pro silnější lesk */
+    animation: zoomIn 3s forwards, fadeIn 3s 0.5s forwards;
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: translateX(-50%) scale(0); opacity: 0; }
+    100% { transform: translateX(-50%) scale(1); opacity: 1; }
+  }
   
   @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateX(-50%) scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(-50%) scale(1);
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
+  
