@@ -15,9 +15,9 @@ body {
     top: 60%;
     left: 50%;
     transform: translateX(-50%) scale(0);
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Arial', sans-serif;
-    color: #f34349; /* Zlatá barva pro elegantní vzhled */
+    color: #f34349;
     text-align: center;
     opacity: 0;
     animation: zoomIn 3s forwards, fadeIn 3s 0.5s forwards;
@@ -34,4 +34,13 @@ body {
     100% { opacity: 1; }
   }
   
-  
+  #cat-gif {
+    position: absolute;
+    top: 70%; 
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    width: 200px; 
+    height: fit-content;
+    animation: zoomIn 3s forwards, fadeIn 3s 0.5s forwards;
+  }
